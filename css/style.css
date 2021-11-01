@@ -7,22 +7,26 @@ body {
     margin: 0px;
     box-sizing: border-box;
   }
+
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
   
   .main-section {
     background: transparent;
     max-width: 500px;
     width: 90%;
     height: 500px;
-    margin: 30px auto;
+    margin: 30px 100px;
     border-radius: 10px;
   }
   
   .add-section {
-    width: 100%;
+    width: 34%;
     background: #fff;
-    margin: 0px auto;
+    margin: 100px auto;
     padding: 10px;
     border-radius: 5px;
+    position: fixed;
+    right: 100px;
   }
   
   .add-section input {
@@ -77,7 +81,7 @@ body {
   .show-todo-section {
     width: 100%;
     background: #fff;
-    margin: 30px auto;
+    margin: 100px auto;
     padding: 10px;
     border-radius: 5px;
   }
@@ -88,7 +92,14 @@ body {
     padding: 20px 10px;
     box-shadow: 0 4px 8px 0 #ccc, 0 6px 20px 0 #ccc;
     border-radius: 5px;
+    cursor: pointer;
   }
+
+  .todo-item:hover{
+    background-color: #0088FF;
+    transition: 0.5s;
+  }
+
   
   .todo-item h2 {
     display: inline-block;
@@ -142,6 +153,149 @@ body {
     font-size: 16px;
     text-align: center;
     color: #cccc;
-  }body{
+  }
+
+  .empty h1{
+    color: black;
+    margin-bottom: 15px;
+    letter-spacing: 8px;
+  }
+  body{
     background: #000;
+}
+
+
+ul {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-65%, 40%);
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  margin: 0 -7px;
+  width: 170px;
+}
+
+ul li a .fa {
+  font-size: 40px;
+  color: #262626;
+  line-height:80px;
+  transition: .5s;
+  padding-right: 14px;
+}
+
+ul li a span {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 22px;
+  left: 15px;
+  color: #262626;
+  letter-spacing: 3px;
+  transition: .5s;
+}
+
+ul li a {
+  text-decoration: none;
+    display: absolute;
+    display: block;
+    width: 150px;
+    height: 60px;
+    background: #fff;
+    text-align: left;
+    padding-left: 5px;
+    transform: rotate(-35deg) skew(25deg) translate(0,0);
+    transition: .2s;
+    box-shadow: -20px 20px 10px rgb(0 0 0 / 50%);
+}
+ul li a:before {
+  content: '';
+  position: absolute;
+  top:10px;
+  left:-20px;
+  height:100%;
+  width:20px;
+  background: #b1b1b1;
+  transform: .5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
+ul li a:after {
+  content: '';
+  position: absolute;
+  bottom:-20px;
+  left:-10px;
+  height:20px;
+  width:100%;
+  background: #b1b1b1;
+  transform: .5s;
+  transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a:hover {
+  transform: rotate(-30deg) skew(25deg) translate(20px,-15px);
+  box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+}
+
+ul li:hover .fa {
+  color:#fff;
+}
+
+ul li:hover span {
+  color:#fff;
+}
+
+ul li:hover:nth-child(1) a{
+  background: #3b5998;
+}
+ul li:hover:nth-child(1) a:before{
+  background: #365492;
+}
+ul li:hover:nth-child(1) a:after{
+  background: #4a69ad;
+}
+
+
+ul li:hover:nth-child(2) a{
+  background: #00aced;
+}
+ul li:hover:nth-child(2) a:before{
+  background: #097aa5;
+}
+ul li:hover:nth-child(2) a:after{
+  background: #53b9e0;
+}
+
+ul li:hover:nth-child(3) a{
+  background: #dd4b39;
+}
+ul li:hover:nth-child(3) a:before{
+  background: #b33a2b;
+}
+ul li:hover:nth-child(3) a:after{
+  background: #e66a5a;
+}
+
+ul li:hover:nth-child(4) a{
+  background: #e4405f;
+}
+ul li:hover:nth-child(4) a:before{
+  background: #d81c3f;
+}
+ul li:hover:nth-child(4) a:after{
+  background: #e46880;
+}
+
+ul li:hover:nth-child(5) a{
+  background: #24292f;
+}
+ul li:hover:nth-child(5) a:before{
+  background: #2F353D;
+}
+ul li:hover:nth-child(5) a:after{
+  background: #384049;
 }

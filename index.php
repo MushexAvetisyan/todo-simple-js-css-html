@@ -10,9 +10,48 @@ require 'db_conn.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My ToDo List</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
     <div class="main-section">
+<div>
+<ul>
+  <li>
+    <a href="https://www.facebook.com/streetart.photograph.50/" target="_blank">
+      <span><i class="fab fa-facebook" area-hidden="true"></i> - Facebook</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://twitter.com/lifeisillusioon" target="_blank">
+      <span><i class="fab fa-twitter"></i> - Twitter</span>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <span><i class="fab fa-google"></i> - Google</span>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <span><i class="fab fa-instagram"></i> - Instagram</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/MushexAvetisyan" target="_blank">
+      <span><i class="fab fa-github"></i> - GitHub</span>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <span> - Pinterest</span>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <span> - Telegram</span>
+    </a>
+  </li>
+</div>
         <div class="add-section">
             <form action="app/add.php" method="POST" autocomplete="off">
                <?php if (isset($_GET['mess']) && $_GET['mess'] == 'error') { ?>
@@ -39,6 +78,7 @@ require 'db_conn.php';
             <?php if ($todos->rowCount() <= 0 ) {?>
         <div class="todo-item">
                 <div class="empty">
+                    <h1>My ToDo List</h1>
                     <img src="img/f.png" width="100%">
                     <img src="img/Ellipsis.gif" width="80px">
                 </div>
@@ -80,8 +120,8 @@ require 'db_conn.php';
                 $.post("app/remove.php", {id: id},
                         (data) => {
                             if(data){
-                                $(this).parent().hide(600);
-                                // location.reload();
+                                // $(this).parent().hide(600);
+                                location.reload();
                             }
                         }
                 );
