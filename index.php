@@ -27,12 +27,7 @@ require 'db_conn.php';
     </a>
   </li>
   <li>
-    <a href="#">
-      <span><i class="fab fa-google"></i> - Google</span>
-    </a>
-  </li>
-  <li>
-    <a href="#">
+    <a href="https://www.instagram.com/mushex_arm/" target="_blank">
       <span><i class="fab fa-instagram"></i> - Instagram</span>
     </a>
   </li>
@@ -42,13 +37,8 @@ require 'db_conn.php';
     </a>
   </li>
   <li>
-    <a href="#">
-      <span> - Pinterest</span>
-    </a>
-  </li>
-  <li>
-    <a href="#">
-      <span> - Telegram</span>
+    <a href="https://www.pinterest.com/avetisyanmushex/_saved/" target="_blank">
+      <span><i class="fab fa-pinterest"></i> - Pinterest</span>
     </a>
   </li>
 </div>
